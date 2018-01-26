@@ -44,8 +44,14 @@ app.get('/',(req,res)=>{
 	res.render('home.hbs',{
 		pageTitle:'Home Page',
 		welcomeMessage:'Welcome to the website'
-	})
-})
+	});
+});
+app.get('/project',(req,res)=>{
+    res.render('project.hbs',{
+    	pageTitle:'Project',   	
+    });
+});
+
 app.get('/bad',(req,res)=>{
 	res.send({
 		errorMessage:'Unable to handle request'
